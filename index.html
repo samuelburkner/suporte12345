@@ -360,22 +360,23 @@
         </div>
     </footer>
     <script>
-        function enviarWhatsApp(event) {
-            event.preventDefault();
-            
-            const nome = document.getElementById('nome').value;
-            const email = document.getElementById('email').value;
-            const telefone = document.getElementById('telefone').value;
-            const assunto = document.getElementById('assunto').value;
-            const mensagem = document.getElementById('mensagem').value;
-            
-            const texto = `*Nova Mensagem do Site*\n\n*Nome:* ${nome}\n*Email:* ${email}\n*Telefone:* ${telefone}\n*Assunto:* ${assunto}\n*Mensagem:* ${mensagem}`;
-            
-            const numeroWhatsApp = '+55 41 9689-8450';
-            const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(texto)}`;
-            
-            window.open(url, '_blank');
-        }
+  function enviarWhatsApp(event) {
+    event.preventDefault();
+    
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const telefone = document.getElementById('telefone').value;
+    const assunto = document.getElementById('assunto').value;
+    const mensagem = document.getElementById('mensagem').value;
+    
+    const texto = `*Nova Mensagem do Site*\n\n*Nome:* ${nome}\n*Email:* ${email}\n*Telefone:* ${telefone}\n*Assunto:* ${assunto}\n*Mensagem:* ${mensagem}`;
+    
+    const numeroWhatsApp = '554196898450'; // Corrigido!
+    const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(texto)}`;
+    
+    window.open(url, '_blank');
+}
+
     </script>
 </body>
 </html>
